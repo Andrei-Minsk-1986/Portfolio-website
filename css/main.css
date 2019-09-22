@@ -1,0 +1,368 @@
+html, body {
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+   min-width: 280px; /*адаптируем страницу под минимальное значение ширины экрана 280пкс*/
+}
+
+
+img {
+    display: inline-block;
+}
+
+a {transition: 0.2s ease-out;} /*для всех ссылок на странице делается плавный переход*/
+/*..........................................................
+
+                        GRID (описание сетки)
+............................................................*/
+
+
+.conteiner {
+    width: 1140px;
+    margin-left: auto;
+    margin-right:auto;
+    
+    
+}
+
+
+.row:after {
+    clear: both;
+    content: "";          /* чтобы контейнер корректо обернул колонки, т.к. применялся селектор FLOAT.*/
+    display: table;
+    
+}
+
+.col-4 {
+    width: 360px;
+    margin-right: 30px;
+    float: left;
+    
+}
+
+.col-4:last-child {
+    margin-right: 0px;
+}
+/*..........................................................
+
+                        HEADER
+............................................................*/
+
+
+.header {
+    background: #aca3dc;
+    background-image: url("../img/bg/bg_index.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+    height: 100vh; /*высота занимает 100% от высоты окна браузера*/
+    min-height: 400px; /*если окно браузера меньше 400, то не будет масштаброваться а ее высота остается 400*/
+    
+    color: #fff;
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    position: relative; /*родительский блок*/
+    
+}
+
+
+.header__title {
+    font-size: 56px;
+    margin-bottom: 30px;
+    font-family: 'Merriweather', serif;
+    margin-top: -50px;
+    
+    
+}
+
+.header__slogan {
+    font-size: 28px;
+    line-height: 42px;
+    
+}
+
+
+.header__arrow {
+    font-size: 48px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+   /* background: red;
+    height: 50px;
+    width: 60px;                применял для того чтобы выставить иконку шеврон по центру экрана */
+    margin-left: -30px;
+}
+
+
+
+
+/*..........................................................
+
+                       PORTFOLIO
+............................................................*/
+
+.portfolio {
+    padding-top: 70px;
+    padding-bottom: 100px; 
+    
+}
+
+
+.title {
+    font-size: 46px;
+    margin-bottom: 60px;
+    font-family: 'Merriweather', serif;
+    text-align: center;
+    
+}
+
+.portfolio-item__img {
+    margin-bottom: 17px;
+}
+
+.portfolio-item__img img {
+    max-width: 100%;     /*задает ширину картинки 100% ширины контейнера в котором она лежит, а лежит она в контейнере portfolio-item__img */
+    height: auto;
+}
+
+
+
+.portfolio-item__title {
+    font-size: 24px;
+    line-height: normal;
+    margin-bottom: 5px;
+   
+}
+
+/*.portfolio-item__text {
+    font-size: 16px;
+    line-height: 1.5px;
+}*/
+
+.portfolio-item__title a {
+    text-decoration: none;
+    color: #000;
+    border-bottom: 1px solid #fff;
+    
+}
+
+.portfolio-item__title a:hover {
+    color: #0052c2;
+    border-color: rgba(0, 82, 194, 0.3);
+    
+}
+
+.portfolio-item__text p {
+   margin-top: 0px;
+   margin-bottom: 15px;
+    
+}
+
+
+
+/*..........................................................
+
+                       PORTFOLIO SIGLE PAGE
+............................................................*/
+
+
+.portfolio-sigle-page {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    
+    
+}
+
+
+.portfolio-sigle-page img {
+    margin-bottom: 50px;
+    max-width: 100%; /*чтобы картинка не выходила за пределы контейнера*/
+    height: auto;
+   /* display: block; /*чтобы картинка чтала блоком, чтобы кнопка не становилась в одну линию с картинкой а переходила под нее*/  
+}
+
+
+.button-back {
+
+    font-weight: 700;
+    text-decoration: none;
+    color: #061634;
+    text-transform: uppercase; /*заглавный текст*/
+    letter-spacing: 1.6px; /*расстояние между буквами*/
+    
+    
+    display: inline-block;
+    
+    border-width: 2px;
+    border-color: #061634;
+    border-style: solid;
+    border-radius: 50px;
+    
+    padding: 8px 23px 8px 23px;
+    
+    margin-bottom: 13px;
+    
+    transition: 0.2s ease-out; /*плавный перехо дл кнопки*/
+}
+
+.button-back:hover {
+    color: #FFF;
+    background-color: #061634;
+    
+}
+/*..........................................................
+
+                       FOOTER
+............................................................*/
+
+
+
+.footer {
+    background-color: #061634;
+    color: #6479a2;
+    padding-top: 90px;
+    padding-bottom: 190px;
+}
+
+
+.footer p {
+    margin-top: 0px;
+    margin-bottom: 15px;
+    
+}
+
+p.footer__name {             /*это тег Р у которого класс footer__name*/
+    font-size: 28px;
+    margin-bottom: 10px;
+    line-height:normal;
+    font-family: 'Merriweather', serif;
+}
+
+p.footer__social {
+    color: #fff;
+}
+
+p.footer__social-icons {
+    color: #fff;
+    font-size: 32px;
+}
+
+p.footer__social-icons a {
+    color: #fff;
+    text-decoration: none; /*убирает подчеркивание под ссылкой*/
+    margin-right: 30px;
+    
+    transition: 0.2s ease-out; /*плавный перехо дл кнопки*/
+}
+
+p.footer__social-icons a:last-child {
+    margin-right: 0px; /*убирает отступ справа у последней иконки-ссылки*/
+}
+
+p.footer__social-icons a:hover {
+    color:aqua;
+}
+
+.button {
+    font-weight: 700;
+    text-decoration: none;
+    color: #FFF;
+    text-transform: uppercase; /*заглавный текст*/
+    letter-spacing: 1.6px; /*расстояние между буквами*/
+    
+    
+    display: inline-block;
+    
+    border-width: 2px;
+    border-color: #fff;
+    border-style: solid;
+    border-radius: 50px;
+    
+    padding: 8px 23px 8px 23px;
+    
+    margin-bottom: 13px;
+    
+    transition: 0.2s ease-out; /*плавный перехо дл кнопки*/
+}
+
+.button:hover {
+    color: #061634;
+    background-color: #FFF;
+    
+}
+
+/*..........................................................
+
+                       MEDIA
+............................................................*/
+
+/*при ширине экрана 1160 или меньше - будет выполнен медиазапрос*/
+@media (max-width: 1160px) {
+    
+    .conteiner {
+        width: 100%; /*при ширине в 100%, мы делаем контенйр резиновым*/
+    }
+    
+    .col-4 {
+        width: 100%; /*реальная ширина контейнера =  width: 100% + border: 0 + padding 15+15/ Из-за этого справа появляется белая полоса и полоса прокрутки*/
+        
+      /*  box-sizing: content-box; это по умолчанию, поэтому и появляется справа белая полоса, нужно переделать в box-sizing: border-box;*/
+        
+        box-sizing: border-box; /* такое правило можно прописать в самом начале, ко всем тэгам, универсальным правилом * {box-sizing: border-box;} */
+        
+        margin: 0; 
+        margin-bottom: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+    }
+    
+    .header {
+        padding-left: 15px;
+        padding-right: 15px;
+        
+    }
+    
+    .header__title {
+        font-size: 38px;
+        line-height: 48px;
+        margin-bottom: 15px;
+        
+    }
+    
+    .header__slogan {
+        font-size: 22px;
+        line-height: 38px;
+        
+    }
+    
+    .portfolio {
+        padding-top: 40px;
+        padding-bottom: 50px;
+        
+    }
+    
+    .title {
+        font-size: 36px;
+        
+    }
+    
+    .footer {
+        padding-top: 70px;
+        padding-bottom: 60px;
+    }
+    
+    
+}
+
+
+
+
+
